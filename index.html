@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>V8 Productos de hormigón</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="V8 Productos de hormigón - Landing page principal de V8 Productos de hormigón">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Cargando...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo-v8.svg" width="47" alt="Silicon">
+            <span class="d-none d-lg-inline">Productos de Hormigón</span>
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link">Descubre</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#product" class="nav-link">Nuestra Gama</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#explore" class="nav-link">Explora</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#whyWe" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">Conéctate</a>
+                </li>
+              </ul>              
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Claro</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Oscuro</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section id="home" class="pt-lg-4 mt-lg-3">
+        <div class="position-relative overflow-hidden">
+  
+          <!-- Image -->
+          <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+            <div class="row h-100 me-n4 me-n2">
+              <div class="col-lg-7 position-relative">
+                <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+                <div class="d-sm-none" style="height: 300px;"></div>
+                <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+                  <div class="jarallax-img" style="background-image: url(assets/img/landing/financial/hero-img.jpeg);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+            <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+              <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+  
+                <!-- Card -->
+                <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
+                  <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                  <div class="card-body position-relative zindex-5">
+                    <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Potencia tu Negocio</p>
+                    <h1 class="display-5 text-light pb-3 mb-3">Bloque v8 Productos de Hormigón</h1>
+                    <p class="fs-lg text-light opacity-70 mb-5">Somos tecnología, capacidad, equipo, conocimiento y experiencia. Hacemos obras, calidad, ingeniería y proyectos. Concretamos sueños.</p>
+                    <div class="d-flex flex-column flex-sm-row">
+                      <a target="_blank" href="https://wa.me/+543873228499?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-success shadow-success btn-lg mb-3 mb-sm-0 me-sm-4">
+                        <i class='bx bxl-whatsapp bx-sm'></i>
+                        &nbsp;
+                        Contáctanos
+                      </a>                      
+                      <a href="#whyWe" class="btn btn-outline-light btn-lg">
+                        Mas de nosotros
+                        <i class="bx bx-right-arrow-alt fs-4 lh-1 ms-2 me-n1"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+  
+                <!-- Contacts (List) -->
+                <ul class="list-unstyled mb-0 px-4 px-lg-0">
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-map fs-xl text-primary me-2"></i>
+                    <a href="https://www.google.com/maps/search/Guemes,+secci%C3%B3n+F,+manzana+9,+parcela+11,+Salta,+General+Guemes,+Salta/@-24.6685302,-65.0482688,14z/data=!3m1!4b1?entry=ttu" target="_blank" rel="noopener noreferrer">
+                      Parque industrial General Güemes, Depto. 11 Gral. Güemes, Provincia de Salta 
+                    </a>
+                  </li>                  
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                    <a href="mailto:info.abeV8@gmail.com" class="nav-link fw-normal p-0">info.abeV8@gmail.com</a>
+                  </li>
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                    <a target="_blank" href="tel:+543874130334" class="nav-link fw-normal p-0">(+54) 387-4130334</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Productos -->
+      <section id="product" class="container py-5 mt-md-3 my-lg-5">
+        <h2 class="h1 pt-xl-2 pb-4 mb-2 mb-lg-3">Nuestra gama</h2>
+        <div class="swiper" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 24,
+          "autoHeight": true,
+          "loop": true,
+          "autoplay": {
+            "delay": 3000
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item 1 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/01.PNG" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 1-->
+                <h3 class="h4">P12</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Bloque para muro de 12 cm
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):39 x 11,7 x 19
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:210
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:12,5
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):8,9
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/02.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 2-->
+                <h3 class="h4">P20</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Bloque para muro de 20 cm
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):39 x 19 x 19
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:90
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:12,5
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):14,6
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/03.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 3-->
+                <h3 class="h4">P20 RC</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Bloque para muro de 20 cm con rebaje central.
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):39 x 19 x 19
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:90
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:12,5
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):14
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="swiper-slide pt-1">
+              <a href="#"><img src="assets/img/landing/financial/services/04.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 1-->
+                <h3 class="h4">Holando</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Adoquín Holando de 8 cm de espesor
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):10 x 20 x 8
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:10
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:50
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):3.5
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="swiper-slide">
+              <a href="#product1"><img src="assets/img/landing/financial/services/05.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div id="product1" class="pt-4">
+                <!--Producto 2-->
+                <h3 class="h4">P20 M</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Bloque para muros portantes de 20 cm de espesor
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):19 x 19 x 19
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:150
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:25
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):8,3
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/06.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 3-->
+                <h3 class="h4">Zig Zag</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fw-bolder fs-sm mb-2">
+                    Adoquín zig zag de 8 cm de espesor
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):11,25 x 22,5 x 8
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:11.28
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2::39
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):4,3
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+            <!-- Item 7 -->
+            <div class="swiper-slide pt-1">
+              <a href="#"><img src="assets/img/landing/financial/services/07.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 1-->
+                <h3 class="h4">Blocon</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Bloques premoldeados de hormigón especialmente diseñados para resolver muros. Integran un sistema de construcción rápido y sencillo de estructuras de contención de suelos. Solos o complementados con geogrillas o anclajes, permiten ejecutar diversos tipos de obras
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):1600 x 800 x 800 mm
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/08.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 2-->
+                <h3 class="h4">Caño H</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2 fw-bolder">
+                    Los caños de hormigón son la mejor opción para cualquier obra en donde sea necesario brindar una solución para proyectos que necesiten la conducción de efluentes líquidos como alcantarillas bajo tránsito vehicular, desagües pluviales, cloacales, industriales, sistemas de riego.
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):1000 x 1200 mm
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/09.png" width="150px" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <!--Producto 3-->
+                <h3 class="h4">SP20</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2 fw-bolder"></i>
+                    Bloque portante símil piedra para muro de 20 cm
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    DIMENSION (CM):39 x 19 x 19
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / PALLET:90
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    CANTIDAD / M2:12,5
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    PESO (KG):17,1
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link text-success px-0">
+                Precios y mas
+                <i class="bx bxl-whatsapp bx-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative d-lg-none mt-5"></div>
+        </div>
+      </section>
+
+
+      <!-- Features (Icon boxes) -->
+      <section id="whyWe" class="container py-5 my-2 my-md-4 my-lg-5">
+        <h2 class="h1 text-center pt-1 pt-xl-3 mb-lg-4">¿Porque nosotros?</h2>
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 24,
+          "autoHeight": true,
+          "loop": true,
+          "autoplay": {
+            "delay": 2500
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-rocket display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h5 pt-3 pb-1 mb-2">Soluciones Innovadoras</h3>
+                <p class="mb-0">Ofrecemos soluciones innovadoras que destacan en la industria de la construcción. Nuestra experiencia en la creación de bloques de alta calidad redefine la excelencia. Cada bloque es cuidadosamente diseñado para proporcionar resistencia y estilo, convirtiéndolo en la elección ideal para tu proyecto de construcción.</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h5 pt-3 pb-1 mb-2">Garantía de Éxito</h3>
+                <p class="mb-0">Garantizamos el éxito de tu proyecto con bloques que superan todas las expectativas. La calidad excepcional y la durabilidad son nuestra promesa. En cada bloque, encuentras la combinación perfecta de resistencia y estética. Confía en nosotros para hacer que tu visión arquitectónica se convierta en realidad.</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-time-five display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h5 pt-3 pb-1 mb-2">Servicio a Tiempo</h3>
+                <p class="mb-0">Entendemos la importancia de la puntualidad en tus proyectos. Nuestro compromiso con el servicio a tiempo asegura que recibas los bloques que necesitas cuando los necesitas. Evita demoras y confía en nosotros para mantener tu proyecto en marcha según lo programado.</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-group display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h5 pt-3 pb-1 mb-2"> Equipo Profesional</h3>
+                <p class="mb-0">Contamos con un equipo de profesionales dedicados a brindar asesoramiento experto en bloques de construcción. Desde la selección del producto hasta la entrega, nuestro equipo está aquí para respaldar tu proyecto. Confía en nosotros para proporcionarte bloques de calidad con un servicio profesional incomparable.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative d-xl-none pt-3 mt-4"></div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-center pt-3 pt-sm-4">
+          <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20un%20presupuesto" class="btn btn-primary shadow-primary btn-lg">Solicita un Presupuesto</a>
+        </div>
+      </section>
+
+
+      <!-- Industries (Slider) -->
+      <section id="explore" class="container pt-xl-3 pb-5">
+        <h2 class="h1 text-center text-lg-start pb-4 mb-1 mb-lg-3">Nuestros pilares</h2>
+        <div class="row pb-2 pb-md-4 pb-lg-5">
+          <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+
+            <!-- Swiper slider -->
+            <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+              "spaceBetween": 30,
+              "loop": true,
+              "tabs": true,
+              "autoHeight": true,
+              "navigation": {
+                "prevEl": "#prev-industry",
+                "nextEl": "#next-industry"
+              }
+            }'>
+              <div class="swiper-wrapper text-center text-lg-start">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-1">
+                  <h3 class="h4 mb-4">
+                    <a href="#explore" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Liderazgo
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>Queremos ser referentes del sector, para ello nos apoyamos en la inversión tecnológica, para lograr soluciones bajo los maximos estándares de exigencia de nuestros clientes.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-2">
+                  <h3 class="h4 mb-4">
+                    <a href="#explore" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Nuestra Visión
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>En ABE V8 s.a. tenemos como visión convertirnos en el principal proveedor de soluciones de hormigón en el mercado de la construcción a nivel provincial y nacional, para ello contamos con una gran diversidad y desarrollo de productos con estándares de calidad certificados, diseño e innovación.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-3">
+                  <h3 class="h4 mb-4">
+                    <a href="#explore" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Nuestra Misión
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>En ABE V8 s.a. nuestra misión es fabricar y desarrollar productos de hormigón basados en la calidad, diseño e innovación, orientados al mercado de la construcción, público o privado en todo el territorio provincial y nacional.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-xl-1 order-1 order-lg-2 pt-lg-3 mt-lg-n5 mb-4 mb-lg-0">
+
+            <!-- Swiper tabs (Industry images) -->
+            <div class="swiper-tabs mt-lg-n5">
+
+              <!-- Industry 1 -->
+              <div id="industry-1" class="swiper-tab active">
+                <img src="assets/img/landing/financial/industries/01.jpg" class="rounded-3" alt="Image">
+              </div>
+
+              <!-- Industry 2 -->
+              <div id="industry-2" class="swiper-tab">
+                <img src="assets/img/landing/financial/industries/02.jpg" class="rounded-3" alt="Image">
+              </div>
+
+              <!-- Industry 3 -->
+              <div id="industry-3" class="swiper-tab">
+                <img src="assets/img/landing/financial/industries/03.jpg" class="rounded-3" alt="Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contact form -->
+      <section id="contact" class="position-relative py-5">
+        <div class="container position-relative zindex-5 py-2 py-md-4 py-lg-5">
+          <div class="row justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11">
+              <h2 class="mb-4">Conectá con nosotros</h2>
+              <p class="text-muted mb-0">¿Te gusta lo que has visto? Empecemos. Simplemente complete algunos datos y nos pondremos en contacto lo antes posible.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <form class="row needs-validation" novalidate action="https://formspree.io/f/xqkvoqzy" method="post">
+                <div class="col-sm-6 mb-4">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" id="name" name="name" class="form-control" required>
+                  <div class="invalid-feedback">Por favor, ingresa tu nombre</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="lastname" class="form-label">Apellido</label>
+                  <input type="text" id="lastname" name="lastname" class="form-control" required>
+                  <div class="invalid-feedback">Por favor, ingresa tu apellido</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="email" class="form-label">Correo</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+                  <div class="invalid-feedback">Por favor, ingresa tu correo</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="phone" class="form-label">Telefono</label>
+                  <input type="text" id="phone" name="phone" class="form-control" data-format='{"numericOnly": true, "delimiters": ["+54 ", " ", " "], "blocks": [0, 3, 3, 2]}' placeholder="+54 ___ ___ __">
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" name="message" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please, enter your message!</div>
+                </div>
+                <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
+                  <button type="submit" class="btn btn-primary shadow-primary btn-lg">Enviar correo</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- BG shape -->
+        <div class="position-absolute end-0 bottom-0 text-primary">
+          <svg width="469" height="343" viewBox="0 0 469 343" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M273.631 680.872C442.436 768.853 639.315 708.216 717.593 558.212C795.871 408.208 732.941 212.157 564.137 124.176C395.333 36.195 198.453 96.8326 120.175 246.836C41.8972 396.84 104.827 592.891 273.631 680.872ZM236.335 752.344C440.804 858.914 688.289 788.686 789.109 595.486C889.928 402.286 805.903 159.274 601.433 52.7043C396.964 -53.8654 149.479 16.3623 48.6595 209.562C-52.1598 402.762 31.8652 645.774 236.335 752.344Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M298.401 633.404C434.98 704.59 598.31 656.971 664.332 530.451C730.355 403.932 675.946 242.827 539.367 171.642C402.787 100.457 239.458 148.076 173.435 274.595C107.413 401.114 161.822 562.219 298.401 633.404ZM288.455 652.464C434.545 728.606 611.369 678.429 683.403 540.391C755.437 402.353 695.402 228.725 549.312 152.583C403.222 76.4404 226.398 126.617 154.365 264.655C82.331 402.693 142.365 576.321 288.455 652.464Z" fill="currentColor"/></svg>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/logo-v8.svg" width="47" alt="Silicon">
+              Productos de Hormigón
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Actualmente contamos con una planta fabril ubicada estratégicamente en el parque industrial de Gral. Güemes depto. 11 S F M9, provincia de salta, la cual nos permite abastecer al mercado provincial y con visión a expandirse a nivel nacional.</p>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Navegación</a>
+                </h6>
+
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Inicio</a></li>
+                    <li class="nav-item"><a href="#product" class="nav-link d-inline-block px-0 pt-1 pb-2">Nuestra gama</a></li>
+                    <li class="nav-item"><a href="#explore" class="nav-link d-inline-block px-0 pt-1 pb-2">Explorá</a></li>
+                    <li class="nav-item"><a href="#whyWe" class="nav-link d-inline-block px-0 pt-1 pb-2">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link d-inline-block px-0 pt-1 pb-2">Conéctate</a></li>
+                  </ul>
+
+                  <!-- Dejamos sin funcionamiento los terminos y condiciones  -->
+
+                  <!-- <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul> -->
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Redes sociales</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a target="_blank" href="https://www.facebook.com/profile.php?id=61552616777955&mibextid=ZbWKwL" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
+                    <li class="nav-item"><a target="_blank" href="https://www.instagram.com/empresaabev8/" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contactanos</h6>
+                <a href="mailto:info.abeV8@gmail.com" class="fw-medium d-block">info.abeV8@gmail.com</a>
+                <a href="mailto:ventas.abeV8@gmail.com" class="fw-medium d-block">ventas.abeV8@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; Creado y Diseñado por </span>
+          <a class="nav-link d-inline-block p-0" href="https://saltacode.com/" target="_blank" rel="noopener">SaltaCode</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Arriba</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
