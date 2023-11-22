@@ -35,6 +35,13 @@
       #main-container{
         background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,0)),url('assets/img/landing/background-vector.webp');
       }
+      .card-hover{
+          background-color: rgba(255, 255, 255, 0.3);
+      }
+      .card-hover:hover{
+          background-color: #ffffff;
+      }
+
 
       .page-loading {
         position: fixed;
@@ -116,7 +123,7 @@
 
       @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
         .dark-mode #main-container {
-          background-color: rgba(44, 44, 44, 0.884);
+          background-color: #2c2c2ce1;
           background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)),url('assets/img/landing/background-vector.webp'); 
         }
 
@@ -124,7 +131,8 @@
           color: rgba(255, 255, 255, 0.842);
         }
         .dark-mode .card-hover{
-          background-color: #13190b00;
+          background-color: rgba(0, 0, 0, 0.3);
+          filter: blur(50%);
         }
         .dark-mode .card-hover:hover{
           background-color: #0b0f19;
@@ -297,7 +305,7 @@
                   </li>
                   <li class="d-flex align-items-center pb-1 mb-2">
                     <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
-                    <a target="_blank" href="tel:+543874130334" class="nav-link fw-normal p-0">(+54) 387-4130334</a>
+                    <a target="_blank" href="tel:+543875913666" class="nav-link fw-normal p-0">(+54) 387-4130334</a>
                   </li>
                 </ul>
               </div>
