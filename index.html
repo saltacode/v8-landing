@@ -33,7 +33,7 @@
     <!-- Page loading styles -->
     <style>
       #main-container{
-        background-image: url('assets/img/landing/background-vector.webp');
+        background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,0)),url('assets/img/landing/background-vector.webp');
       }
 
       .page-loading {
@@ -115,15 +115,41 @@
       }
 
       @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
-        html.dark-mode #main-container {
+        .dark-mode #main-container {
           background-color: rgba(44, 44, 44, 0.884);
-          background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.7)),url('assets/img/landing/background-vector.webp'); 
+          background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)),url('assets/img/landing/background-vector.webp'); 
         }
 
-        html.dark-mode body .swiper-wrapper{
-          color: rgb(255, 255, 255);
+        .dark-mode .swiper-wrapper{
+          color: rgba(255, 255, 255, 0.842);
+        }
+        .dark-mode .card-hover{
+          background-color: #13190b00;
+        }
+        .dark-mode .card-hover:hover{
+          background-color: #0b0f19;
         }
         
+        /* Change elements colors */
+        /* .dark-mode .text-primary{
+          color: rgb(28, 216, 153) !important;
+        }
+
+        .dark-mode .form-switch .form-check-input:checked{
+          background-color: aqua;
+        }
+
+        .dark-mode .btn-primary {
+          --si-btn-bg: #8b0048;
+          --si-btn-border-color: #35e609;
+          --si-btn-hover-color: #fff;
+          --si-btn-active-color: #fff;
+          --si-btn-hover-bg: #fa0064;
+          --si-btn-active-bg: #ff0066;
+          --si-btn-hover-border-color: #ff0d6e;
+          --si-btn-active-border-color: #ff0066;
+          --si-btn-disabled-color: #fff;
+        } */
       } 
     </style>
 
@@ -335,7 +361,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20bloque%20P12" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -369,7 +395,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20bloque%20P20" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -403,7 +429,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20bloque%20P20%20RC" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -437,7 +463,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20adoquín%20Holando" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -471,7 +497,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20bloque%20P20%20M" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -505,7 +531,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20adoquín%20zig%20zag" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -526,7 +552,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20de%20los%20blocones" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -548,7 +574,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20caño%20de%20hormigón%20H" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -583,7 +609,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="https://wa.me/+543874130334?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información" class="btn btn-link text-success px-0">
+              <a href="https://wa.me/+543874130334?text=Hola,%20quisisera%20consultar%20el%20precio%20del%20bloque%20SP20" class="btn btn-link text-success px-0">
                 Precios y mas
                 <i class="bx bxl-whatsapp bx-sm"></i>
               </a>
@@ -634,7 +660,7 @@
             <!-- Item -->
             <div class="swiper-slide h-auto py-3">
               <div class="card h-100 card-body card-hover mx-2">
-                <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;">  </i>
                 <h3 class="h5 pt-3 pb-1 mb-2">Garantía de Éxito</h3>
                 <p class="mb-0">Garantizamos el éxito de tu proyecto con bloques que superan todas las expectativas. La calidad excepcional y la durabilidad son nuestra promesa. En cada bloque, encuentras la combinación perfecta de resistencia y estética. Confía en nosotros para hacer que tu visión arquitectónica se convierta en realidad.</p>
               </div>
@@ -720,13 +746,13 @@
                   <p>En ABE V8 s.a. nuestra misión es fabricar y desarrollar productos de hormigón basados en la calidad, diseño e innovación, orientados al mercado de la construcción, público o privado en todo el territorio provincial y nacional.</p>
                 </div>
                 <div class="swiper-slide" data-swiper-tab="#industry-3">
-                  <h3 class="h4 mb-auto">
+                  <h3 class="h4 mb-0 pb-lg-0">
                     <a href="#explore" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
                       Valores
                       <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
                     </a>
                   </h3>
-                  <p>En V8 Productos de Hormigón ABE S.A nos esofrzamos día a día  con estos valores, inculcando a que nuestro personal los asuma, para el beneficio y prosperidad de nuestra empresa, de los clientes y de nuestra sociedad en conjunto: CALIDAD, HONESTIDAD, LEALTAD, RESPONSABILIDAD SOCIAL Y AMBIENTAL, RESPETO Y SEGURIDAD</p>
+                  <p>Nos esofrzamos día a día con estos valores, inculcando a que nuestro personal los asuma, para el beneficio y prosperidad de nuestra empresa, los clientes y de nuestra sociedad en conjunto: CALIDAD, HONESTIDAD, LEALTAD, RESPONSABILIDAD SOCIAL Y AMBIENTAL, RESPETO Y SEGURIDAD</p>
                 </div>
               </div>
             </div>
