@@ -33,13 +33,16 @@
     <!-- Page loading styles -->
     <style>
       #main-container{
-        background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,0)),url('assets/img/landing/background-vector.webp');
+        background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.15)),url('assets/img/landing/background-vector.webp');
       }
       .card-hover{
-          background-color: rgba(255, 255, 255, 0.3);
+          background-color: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(3px);          
       }
+
       .card-hover:hover{
           background-color: #ffffff;
+          backdrop-filter: blur(0);         
       }
 
 
@@ -124,15 +127,15 @@
       @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
         .dark-mode #main-container {
           background-color: #2c2c2ce1;
-          background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)),url('assets/img/landing/background-vector.webp'); 
+          background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8)),url('assets/img/landing/background-vector.webp'); 
         }
 
         .dark-mode .swiper-wrapper{
           color: rgba(255, 255, 255, 0.842);
         }
         .dark-mode .card-hover{
-          background-color: rgba(0, 0, 0, 0.3);
-          filter: blur(50%);
+          background-color: rgba(0, 0, 0, 0.15);
+          backdrop-filter: blur(3px);   
         }
         .dark-mode .card-hover:hover{
           background-color: #0b0f19;
@@ -295,7 +298,7 @@
                 <ul class="list-unstyled mb-0 px-4 px-lg-0">
                   <li class="d-flex align-items-center pb-1 mb-2">
                     <i class="bx bx-map fs-xl text-primary me-2"></i>
-                    <a href="https://www.google.com/maps/search/Guemes,+secci%C3%B3n+F,+manzana+9,+parcela+11,+Salta,+General+Guemes,+Salta/@-24.6685302,-65.0482688,14z/data=!3m1!4b1?entry=ttu" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/maps/place/V8+Productos+De+Hormig%C3%B3n+%22ABE+S.A.%22/@-24.7023669,-65.0367022,17z/data=!4m14!1m7!3m6!1s0x941a3478db0caabb:0xb6ac1906984867ac!2sParque+Industrial+G%C3%BCemes!8m2!3d-24.7092194!4d-65.0356494!16s%2Fg%2F11bzs2yz40!3m5!1s0x941a33097218022b:0xbd902f6272f41278!8m2!3d-24.7021125!4d-65.036955!16s%2Fg%2F11j2yc4h2m?entry=ttu" target="_blank" rel="noopener noreferrer">
                       Parque industrial General Güemes, Depto. 11 Gral. Güemes, Provincia de Salta 
                     </a>
                   </li>                  
