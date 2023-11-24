@@ -415,7 +415,7 @@
         </section>
 
         <!-- Productos -->
-        <section id="product" class="container py-5 mt-md-3 my-lg-5">
+        <section id="product" class="container py-5 mt-md-3 my-lg-5 ">
           <h2 class="h1 pt-xl-2 pb-4 mb-2 mb-lg-3">Nuestra gama</h2>
           <div
             class="swiper"
@@ -852,7 +852,6 @@
         }'
           >
             <div class="swiper-wrapper">
-              <!-- Item -->
               <div class="swiper-slide h-auto py-3">
                 <div class="card h-100 card-body card-hover mx-2">
                   <i
@@ -871,7 +870,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide h-auto py-3">
                 <div class="card h-100 card-body card-hover mx-2">
                   <i
@@ -891,7 +889,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide h-auto py-3">
                 <div class="card h-100 card-body card-hover mx-2">
                   <i
@@ -909,7 +906,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide h-auto py-3">
                 <div class="card h-100 card-body card-hover mx-2">
                   <i
@@ -958,17 +954,24 @@
                 data-swiper-options='{
                   "spaceBetween": 30,
                   "loop": true,
-                  "tabs": true,
+                  "autoplay": {
+                    "running": true,
+                    "delay": 2500
+                  },
                   "autoHeight": true,
                   "navigation": {
                     "prevEl": "#prev-industry",
                     "nextEl": "#next-industry"
+                  },
+                  "pagination": {
+                    "el": ".swiper-pagination", 
+                    "type": "bullets",
+                    "clickable": true
                   }
                 }'
               >
                 <div class="swiper-wrapper text-center text-lg-start">
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-1">
+                  <div class="swiper-slide">
                     <h3 class="h4 mb-4">
                       <a
                         href="#explore"
@@ -987,8 +990,7 @@
                     </p>
                   </div>
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-2">
+                  <div class="swiper-slide">
                     <h3 class="h4 mb-4">
                       <a
                         href="#explore"
@@ -1010,8 +1012,7 @@
                     </p>
                   </div>
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-3">
+                  <div class="swiper-slide">
                     <h3 class="h4 mb-4">
                       <a
                         href="#explore"
@@ -1032,8 +1033,7 @@
                     </p>
                   </div>
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-4">
+                  <div class="swiper-slide">
                     <h3 class="h4 mb-0 pb-lg-0">
                       <a
                         href="#explore"
@@ -1079,15 +1079,20 @@
               </div>
             </div>
             <div
-              class="col-lg-7 offset-xl-1 order-1 order-lg-2 pt-lg-3 mt-lg-n5 mb-4 mb-lg-0"
+              class=" col-lg-7 offset-xl-1 order-1 order-lg-2 pt-lg-3 mt-lg-n5 mb-4 mb-lg-0"
             >
               <div id="gallery-slider" class="swiper" data-swiper-options='{
                 "loop": true,
                 "autoplay": {
                   "running": true,
                   "delay": 2500
+                },
+                "pagination": {
+                  "el": ".swiper-pagination", 
+                  "type": "bullets",
+                  "clickable": true
                 }
-                }'>
+              }'>
                 <div class="swiper-wrapper mt-lg-n5">
                   <div class="swiper-slide active" transition>
                     <img src="assets/img/landing/financial/industries/01.jpg" class="d-block w-100" />
@@ -1470,5 +1475,6 @@
     <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
+    
   </body>
 </html>
