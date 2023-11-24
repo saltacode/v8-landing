@@ -68,10 +68,20 @@
     <!-- Page loading styles -->
     <style>
       #main-container{
-        background-color: #eeeeee;
-        background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.03)),url(assets/img/landing/background.webp);
+        position: relative;
       }
 
+      #main-container::before{
+        content: '';
+        background-image: url(assets/img/landing/background.webp);
+        background-size: repeat;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.3;
+      }
       .card-hover {
         background-color: rgba(255, 255, 255, 0.3);
       }
@@ -159,13 +169,9 @@
       }
 
       @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
-        .dark-mode #main-container {
-          background-color: #2c2c2ce1;
-          background-image: linear-gradient(
-              rgba(0, 0, 0, 0.6),
-              rgba(0, 0, 0, 0.9)
-            ),
-            url("assets/img/landing/background.webp");
+        .dark-mode #main-container::before{
+          background-color: #0b0f19 ;
+          opacity: .05;
         }
 
         .dark-mode .swiper-wrapper {
