@@ -272,7 +272,7 @@
                     <a href="#home" class="nav-link">Descubre</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#product" class="nav-link">Nuestra Gama</a>
+                    <a href="#product" class="nav-link">Nuestros productos</a>
                   </li>
                   <li class="nav-item">
                     <a href="#explore" class="nav-link">Explora</a>
@@ -1571,6 +1571,15 @@
     <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      // Agregar un listener para ocultar el offcanvas al hacer clic en un enlace del menú
+      document.querySelectorAll('.navbar-nav a').forEach(function(element) {
+        element.addEventListener('click', function() {
+          $('#navbarNav').offcanvas('hide');
+        });
+      });
+    </script>
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
   </body>
