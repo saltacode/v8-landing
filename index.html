@@ -1349,12 +1349,13 @@
                   <div class="col-sm-6 mb-4">
                     <label for="phone" class="form-label">Telefono</label>
                     <input
-                      type="text"
+                      type="tel"
                       id="phone"
                       name="phone"
                       class="form-control"
-                      data-format='{"numericOnly": true, "delimiters": ["+54 ", " ", " "], "blocks": [0, 3, 3, 4]}'
+                      data-format='{"numericOnly": true, "delimiters": ["+ ", " ", " "], "blocks": [0, 2, 3, 3, 4]}'
                       placeholder="+54 ___ ___ ____"
+                      value="+54 "
                     />
                   </div>
                   <div class="col-12 mb-4">
