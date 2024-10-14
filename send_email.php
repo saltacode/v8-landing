@@ -35,3 +35,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Método de solicitud no válido.";
 }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notification</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Link to your CSS -->
+</head>
+<body>
+
+    <h1>Email Notification</h1>
+    <p>Your email has been sent successfully!</p>
+
+    <!-- Add more content as needed -->
+
+</body>
+</html>
