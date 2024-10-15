@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>V8 Productos de hormigón</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="V8 Productos de hormigón - Landing page principal de V8 Productos de hormigón"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#6366f1"
+    />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      #main-container {
+        position: relative;
+      }
+
+      #main-container::before {
+        content: "";
+        background-image: url(assets/img/landing/background.webp);
+        background-size: repeat;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4;
+        z-index: -1;
+      }
+
+      .card-hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .card-hover:hover {
+        background-color: #ffffff;
+      }
+
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-right-color: transparent;
+      }
+      #gallery-slider div {
+        transition: 1.7s;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+        .dark-mode #main-container::before {
+          background-color: #0b0f19;
+          opacity: 0.05;
+        }
+
+        .dark-mode .swiper-wrapper {
+          color: rgba(255, 255, 255, 0.842);
+        }
+        .dark-mode .card-hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .dark-mode .card-hover:hover {
+          background-color: #0b0f19;
+        }
+
+        /* Change elements colors */
+        /* .dark-mode .text-primary{
+          color: rgb(28, 216, 153) !important;
+        }
+
+        .dark-mode .form-switch .form-check-input:checked{
+          background-color: aqua;
+        }
+
+        .dark-mode .btn-primary {
+          --si-btn-bg: #8b0048;
+          --si-btn-border-color: #35e609;
+          --si-btn-hover-color: #fff;
+          --si-btn-active-color: #fff;
+          --si-btn-hover-bg: #fa0064;
+          --si-btn-active-bg: #ff0066;
+          --si-btn-hover-border-color: #ff0d6e;
+          --si-btn-active-border-color: #ff0066;
+          --si-btn-disabled-color: #fff;
+        } */
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== null && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <div id="main-container">
+      <!-- Page loading spinner -->
+      <div class="page-loading active">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div>
+          <span>Cargando...</span>
+        </div>
+      </div>
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo-v8.svg" width="47" alt="Silicon" />
+            <span class="d-none d-lg-inline">Productos de Hormigón</span>
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            
+          </div>
+          <div
+            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+            data-bs-toggle="mode"
+          >
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Claro</label
+            >
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Oscuro</label
+            >
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+      <div class="my-5">
+        <h5 class="text-center">Hubo un  problema al enviar formulario, intente nuevamente</h5>
+        <p class="text-center">Será redirigido enseguida</p>
+      </div>
+
+      <!-- Add more content as needed -->
+      <script>
+          setTimeout(() => {
+              window.location.href = "index.html";
+          }, 3000);
+      </script>
+
+      <!-- Footer -->
+      <footer
+        class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5"
+      >
+        <div class="container pt-lg-4">
+          <div class="row pb-5">
+            <div class="col-lg-4 col-md-6">
+              <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                <img src="assets/img/logo-v8.svg" width="47" alt="Silicon" />
+                Productos de Hormigón
+              </div>
+              <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">
+                Actualmente contamos con una planta fabril ubicada
+                estratégicamente en el parque industrial de Gral. Güemes depto.
+                11 S F M9, provincia de salta, la cual nos permite abastecer al
+                mercado provincial y con visión a expandirse a nivel nacional.
+              </p>
+            </div>
+            <div
+              class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"
+            >
+              <div id="footer-links" class="row">
+                <div class="col-lg-4">
+                  <h6 class="mb-2">
+                    <a
+                      href="#useful-links"
+                      class="d-block text-dark dropdown-toggle d-lg-none py-2"
+                      data-bs-toggle="collapse"
+                      >Navegación</a
+                    >
+                  </h6>
+
+                  <div
+                    id="useful-links"
+                    class="collapse d-lg-block"
+                    data-bs-parent="#footer-links"
+                  >
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                      <li class="nav-item">
+                        <a
+                          href="#"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Inicio</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="#product"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Nuestra gama</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="#explore"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Explorá</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="#whyWe"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Quiénes somos</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="#contact"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Conéctate</a
+                        >
+                      </li>
+                    </ul>
+
+                    <!-- Dejamos sin funcionamiento los terminos y condiciones  -->
+
+                    <!-- <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul> -->
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-3">
+                  <h6 class="mb-2">
+                    <a
+                      href="#social-links"
+                      class="d-block text-dark dropdown-toggle d-lg-none py-2"
+                      data-bs-toggle="collapse"
+                      >Redes sociales</a
+                    >
+                  </h6>
+                  <div
+                    id="social-links"
+                    class="collapse d-lg-block"
+                    data-bs-parent="#footer-links"
+                  >
+                    <ul class="nav flex-column mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a
+                          target="_blank"
+                          href="https://www.facebook.com/profile.php?id=61552616777955&mibextid=ZbWKwL"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Facebook</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          target="_blank"
+                          href="https://www.instagram.com/empresaabev8/"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Instagram</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          target="_blank"
+                          href="https://www.linkedin.com/in/abe-v8-productos-de-hormigon-21354829b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                          class="nav-link d-inline-block px-0 pt-1 pb-2"
+                          >Linkedin</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                  <h6 class="mb-2">Contactanos</h6>
+                  <a
+                    href="mailto:info.abeV8@gmail.com"
+                    class="fw-medium d-block"
+                    >info.abeV8@gmail.com</a
+                  >
+                  <a
+                    href="mailto:ventas.abeV8@gmail.com"
+                    class="fw-medium d-block"
+                    >ventas.abeV8@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0"
+          >
+            <span class="text-light opacity-50"
+              >&copy; Creado y Diseñado por
+            </span>
+            <a
+              class="nav-link d-inline-block p-0"
+              href="https://saltacode.com/"
+              target="_blank"
+              rel="noopener"
+              >SaltaCode</a
+            >
+          </p>
+        </div>
+      </footer>
+
+      <!-- Back to top button -->
+      <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Arriba</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      // Agregar un listener para ocultar el offcanvas al hacer clic en un enlace del menú
+      document.querySelectorAll('.navbar-nav a').forEach(function(element) {
+        element.addEventListener('click', function() {
+          $('#navbarNav').offcanvas('hide');
+        });
+      });
+    </script>
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
