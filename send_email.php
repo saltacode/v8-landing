@@ -1,13 +1,10 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
-
-    
 
     // Crear el contenido del correo
     $body = "Nombre: $name\n";
@@ -25,16 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "guilletorres81@gmail.com";
     $subject = "Nuevo mensaje de contacto";
 
-
     // Enviar el correo
-    if (@mail(to: $to, subject: $subject, message: $body, additional_headers: $headers)) {
-        header("Location: index.html");
-    } else {
-        echo "Error al enviar el correo.";
-    }
-} else {
-    echo "Método de solicitud no válido.";
-}
+    mail($to, $subject, $body,  $headers);
+    header("Location: index.html");
+    
 
 ?>
 <!DOCTYPE html>
@@ -42,15 +33,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Notification</title>
+    <title>Email enviado</title>
     <link rel="stylesheet" href="style.css"> <!-- Optional: Link to your CSS -->
 </head>
 <body>
 
-    <h1>Email Notification</h1>
-    <p>Your email has been sent successfully!</p>
+    <h1>Notificaión</h1>
+    <p>Email enviado correctamente</p>
 
     <!-- Add more content as needed -->
-
+    <script>
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 2000);
+    </script>
 </body>
 </html>
